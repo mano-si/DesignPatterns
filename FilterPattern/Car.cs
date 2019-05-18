@@ -1,9 +1,8 @@
-﻿using System;
-namespace FilterPattern
+﻿namespace FilterPattern
 {
 	public class Car
 	{
-		public string Brand { get; set; }
+		public Brand Brand { get; set; }
 
 		public string ModelName { get; set; }
 
@@ -14,5 +13,10 @@ namespace FilterPattern
 		public Color Color { get; set; }
 
 		public Specification Specification { get; set; }
+
+		public override string ToString()
+		{
+			return Brand.ToString() + " - " + ModelName + ", Color : " + Color.ToString() + ", Price : Rs." + Price;
+		}
 	}
 }

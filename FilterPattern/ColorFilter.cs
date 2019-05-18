@@ -7,9 +7,12 @@ namespace FilterPattern
 {
 	public class ColorFilter : IFilter
 	{
-		public IEnumerable<Car> Filter(IEnumerable<Car> Cars, FilterCriteria filterCriteria)
+		public IEnumerable<Car> Filter(IEnumerable<Car> cars, FilterCriteria filterCriteria)
 		{
-			return Cars.Where(x => x.Color == filterCriteria.Color);
+			if (filterCriteria.Colors.Any())
+				return cars.Where(x => filterCriteria.Colors.Contains(x.Color));
+
+            return cars;
 		}
 	}
 }

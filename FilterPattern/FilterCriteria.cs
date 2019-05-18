@@ -1,13 +1,15 @@
-﻿namespace FilterPattern
+﻿using System.Collections.Generic;
+
+namespace FilterPattern
 {
     public class FilterCriteria
     {
-		public string Brand { get; set; }
+		public List<Brand> Brands { get; set; }
 
 		public double StartPrice { get; set; }
-
+        
 		public double EndPrice { get; set; }
-
-		public Color Color { get; set; }
+        
+		public List<Color> Colors { get; set; }
     }
 }
