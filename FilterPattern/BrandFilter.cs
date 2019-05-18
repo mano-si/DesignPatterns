@@ -8,8 +8,11 @@ namespace FilterPattern
 	public class BrandFilter : IFilter
     {
 		public IEnumerable<Car> Filter(IEnumerable<Car> cars, FilterCriteria filterCriteria)
-		{
-			return cars.Where(x => x.Brand == filterCriteria.Brand);
+		{         
+			if(filterCriteria.Brands.Any())
+				return cars.Where(x => filterCriteria.Brands.Contains(x.Brand));
+
+			return cars;
 		}
     }
 }
