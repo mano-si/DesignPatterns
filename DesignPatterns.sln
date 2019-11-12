@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterPattern", "FilterPatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "MainApp\MainApp.csproj", "{26C61234-FABD-404C-A5FC-B72F24CC5C72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "StrategyPattern\StrategyPattern.csproj", "{7D014F28-435D-4C91-A32D-9C4E15F5C7D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{26C61234-FABD-404C-A5FC-B72F24CC5C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26C61234-FABD-404C-A5FC-B72F24CC5C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26C61234-FABD-404C-A5FC-B72F24CC5C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D014F28-435D-4C91-A32D-9C4E15F5C7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D014F28-435D-4C91-A32D-9C4E15F5C7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D014F28-435D-4C91-A32D-9C4E15F5C7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D014F28-435D-4C91-A32D-9C4E15F5C7D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
