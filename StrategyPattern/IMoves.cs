@@ -3,10 +3,10 @@ namespace StrategyPattern
 {
     public interface IMoves
     {
-        public void Attack();
+        void Attack();
 
-        public void Defend();
+        void Defend();
 
-        public void SpecialMove();
+        void SpecialMove();
     }
 }

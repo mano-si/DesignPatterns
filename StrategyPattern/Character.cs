@@ -5,27 +5,34 @@ namespace StrategyPattern
     {
         private IMoves _moves;
 
-        private Character(IMoves moves)
+        public Character()
+            : this(new HumanMoves())
+        {
+        }
+
+        public Character(IMoves moves)
         {
             this._moves = moves;
         }
 
-        public Character CreateCharacter(string characterName)
+        public void SetCharacterMoveStrategy(IMoves moves)
         {
-            switch (characterName)
-            {
-                case "antman":
-                    return new Character(new AntmanMoves());
+            this._moves = moves;
+        }
 
-                case "superman":
-                    return new Character(new SupermanMoves());
+        public void Attack()
+        {
+            this._moves.Attack();
+        }
 
-                case "batman":
-                    return new Character(new BatmanMoves());
+        public void Defend()
+        {
+            this._moves.Defend();
+        }
 
-                default:
-                    return null;
-            }
+        public void SpecialMove()
+        {
+            this._moves.SpecialMove();
         }
     }
 }
