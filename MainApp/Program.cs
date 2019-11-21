@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using FilterPattern;
+using StrategyPattern;
 #endregion
 
 namespace MainApp
@@ -10,10 +11,12 @@ namespace MainApp
     {
         public static void Main(string[] args)
         {
-			DemoFilterPattern();
+            //DemoFilterPattern();
+            //DemoStrategyPattern();
         }
 
-		private static void DemoFilterPattern()
+        #region FilterPattern
+        private static void DemoFilterPattern()
 		{
 			IEnumerable<Car> cars = CarFactory.MakeSomeCars();
 
@@ -53,5 +56,32 @@ namespace MainApp
 				System.Console.WriteLine(car.ToString());
 			}
 		}
+        #endregion
+
+        #region StrategyPattern
+        private static void DemoStrategyPattern()
+        {
+            // Create a generic character with basic moves
+            Character character = new Character();
+            character.Attack();
+            character.SpecialMove();
+
+            // Change moves strategy to superman
+            character.SetCharacterMoveStrategy(new SupermanMoves());
+            character.Attack();
+            character.SpecialMove();
+
+            // Change moves strategy to batman
+            character.SetCharacterMoveStrategy(new BatmanMoves());
+            character.Attack();
+            character.Defend();
+
+            // Change moves strategy to antman
+            character.SetCharacterMoveStrategy(new BatmanMoves());
+            character.Attack();
+            character.Defend();
+            character.SpecialMove();
+        }
+        #endregion
     }
 }

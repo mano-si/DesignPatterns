@@ -39,6 +39,10 @@
       <Project>{9DFF3049-CB3F-4D2E-97B1-C436D756C36B}</Project>
       <Name>FilterPattern</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StrategyPattern\StrategyPattern.csproj">
+      <Project>{7D014F28-435D-4C91-A32D-9C4E15F5C7D8}</Project>
+      <Name>StrategyPattern</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
